@@ -1,0 +1,20 @@
+.centered-text {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.center-grid {
+    width: 70%;
+}
+
+#heading-bar {
+    background-color: #0074D9;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    color: white;
+}
+
+#heading-bar h1 {
+    padding-top: 2em;
+    font-weight: 500;
+}
