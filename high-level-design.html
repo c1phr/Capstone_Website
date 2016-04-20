@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="css/picnic.min.css">
         <link rel="stylesheet" href="css/plugins.min.css">
         <link rel="stylesheet" href="css/style.css">
-        <title>CS Capstone</title>
+        <title>Team Flock</title>
     </head>
     <body>
         <nav>
@@ -18,7 +18,7 @@
                 <a href="description.html" class="pseudo button">Description</a>
                 <a href="requirements.html" class="pseudo button">Requirements</a>
                 <a href="high-level-design.html" class="pseudo button">High-Level Design</a>
-                <a href="tools.html" class="pseudo button">Tools</a>
+                <a href="tools.html" class="pseudo button">Tech Stack</a>
                 <a href="schedule.html" class="pseudo button">Schedule</a>
             </div>
         </nav>
@@ -26,7 +26,7 @@
             <div class="">
             </div>
             <div class="center-grid">
-                <h1 class="centered-text">High-Level Design</h1>
+                <h1 class="centered-text">Architecture</h1>
             </div>
             <div class="">
             </div>
@@ -34,23 +34,26 @@
         <div class="row">
             <div>
             </div>
-            <div class="center-grid">
-                <h2 class="centered-text">
-                </h2>
+            <div class="center-grid">                
                 <hr>
-                <p>
-                    Project Information
-                </p>
-                <p><b>Prototype 1:</b> The first version of this prototype will contain
-                    a gps function that finds the user of the application as well as other people that are considered in a
-                    group. Gps coordinates will then be sent to a server managing the group, to share to all devices in the group.
-                    The server will also maintain text chat between members of the group.
-                </p>
-                <h2 class="centered-text">
-                </h2>
+                    <p>
+                        The architecture of the system as a whole centers around mobile devices acting as clients in the system. These clients communicate with two external sources: GPS satellites and a central messaging server. Communication between clients and the central messaging server happens over the device’s available network connections, either cellular or wi-fi.
+                    </p>
+                    <a href="img/ArchitectureOverview.png">
+                        <img src="img/ArchitectureOverview.png" alt="Architecture Overview" style="width: 75%;" />
+                    </a>
+                    
+                    <p>
+                        Typically, GPS satellites are used in conjunction with cellular towers to obtain the position of a user’s device which is sent to the user’s groups through the central messaging server. If a device does not include a GPS radio, then the Android operating system will gather location data based on cellular network triangulation or other means of gaining location data that is available to the system.
+                    </p>
+                    <p>
+                        Communication between devices and the central messaging server follows a similar architecture to a traditional client-server architecture as found on the web. User account information is posted to and retrieved from the server via standard HTTP GET and POST requests. Chat messages are transmitted over an open WebSockets connection that is maintained between the server and active clients. WebSockets allows new messages to be pushed directly to the client whenever a new message is published to a group that the user is subscribed to.
+                    </p>
+                    <p>
+                        When a client device becomes “inactive”, such that the application is pushed to the background or the screen is turned off, then chat messages are sent to the client over the Google Cloud Messaging service. The Google Cloud Messaging service maintains an always open connection to Android devices running Google Play Services (which includes nearly all Android phones), so chat messages can be pushed to clients without impacting battery performance.
+                    </p>
                 <hr>
-                <p>
-                </p>
+                
             </div>
             <div>
             </div>

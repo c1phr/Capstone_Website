@@ -21,7 +21,7 @@
 }
 
 .thin {
-    line-height: 0%;
+    line-height: normal;
 }
 
 #heading-bar {
@@ -36,4 +36,14 @@
     font-weight: 500;
 }
 
+.underline {
+    text-decoration: underline;
+}
 
+img {
+    width: 100%;    
+    text-decoration: none;
+    border: 0 none;
+    margin: 0 auto;
+    display: block;
+}
