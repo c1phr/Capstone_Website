@@ -1,0 +1,77 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/picnic.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Team Flock</title>
+</head>
+<body>
+<nav>
+    <a href="index.html" class="brand">
+        <span>Team Flock - Lightweight Groups</span>
+    </a>
+    <!-- Responsive Bits -->
+    <input type="checkbox" class="show" id="bmenub">
+    <label for="bmenub" class="burger pseudo button">&#9776;</label>
+    <div class="menu">
+        <a href="index.html" class="pseudo button">Home</a>
+        <a href="meet-the-team.html" class="pseudo button">Meet Team Flock</a>
+        <a href="description.html" class="pseudo button">Description</a>
+        <a href="requirements.html" class="pseudo button">Requirements</a>
+        <a href="architecture.html" class="pseudo button">Architecture</a>
+        <a href="tools.html" class="pseudo button">Tech Stack</a>
+        <a href="schedule.html" class="pseudo button">Schedule</a>
+    </div>
+</nav>
+<div class="row" id="heading-bar">
+    <div class="">
+    </div>
+    <div class="center-grid">
+        <h1 class="centered-text">Architecture Design</h1>
+    </div>
+    <div class="">
+    </div>
+</div>
+<div class="row">
+    <div>
+    </div>
+    <div class="center-grid">
+        <p>
+            The architecture of the system as a whole centers around mobile devices acting as clients in the system.
+            These clients communicate with two external sources: GPS satellites and a central messaging server.
+            Communication between clients and the central messaging server happens over the device’s available network
+            connections, either cellular or wi-fi.
+        </p>
+        <a href="img/ArchitectureOverview.png">
+            <img src="img/ArchitectureOverview.png" alt="Architecture Overview" style="width: 75%;"/>
+        </a>
+
+        <p>
+            Typically, GPS satellites are used in conjunction with cellular towers to obtain the position of a user’s
+            device which is sent to the user’s groups through the central messaging server. If a device does not include
+            a GPS radio, then the Android operating system will gather location data based on cellular network
+            triangulation or other means of gaining location data that is available to the system.
+        </p>
+        <p>
+            Communication between devices and the central messaging server follows a similar architecture to a
+            traditional client-server architecture as found on the web. User account information is posted to and
+            retrieved from the server via standard HTTP GET and POST requests. Chat messages are transmitted over an
+            open WebSockets connection that is maintained between the server and active clients. WebSockets allows new
+            messages to be pushed directly to the client whenever a new message is published to a group that the user is
+            subscribed to.
+        </p>
+        <p>
+            When a client device becomes “inactive”, such that the application is pushed to the background or the screen
+            is turned off, then chat messages are sent to the client over the Google Cloud Messaging service. The Google
+            Cloud Messaging service maintains an always open connection to Android devices running Google Play Services
+            (which includes nearly all Android phones), so chat messages can be pushed to clients without impacting
+            battery performance.
+        </p>
+
+
+    </div>
+    <div>
+    </div>
+</div>
+</body>
+</html>

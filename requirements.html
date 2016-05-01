@@ -1,285 +1,281 @@
 <html>
-    <head>
-      <link rel="stylesheet" href="css/picnic.min.css">
-      <link rel="stylesheet" href="css/plugins.min.css">
-      <link rel="stylesheet" href="css/style.css">
-      <title>Team Flock</title>
-    </head>
-    <body>
-        <nav>
-            <a href="index.html" class="brand">
-                <span>Lightweight Groups</span>
-            </a>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/picnic.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Team Flock</title>
+</head>
+<body>
+<nav>
+    <a href="index.html" class="brand">
+        <span>Team Flock - Lightweight Groups</span>
+    </a>
 
-            <!-- Responsive Bits -->
-            <input type="checkbox" class="show" id="bmenub">
-            <label for="bmenub" class="burger pseudo button">&#9776;</label>
+    <!-- Responsive Bits -->
+    <input type="checkbox" class="show" id="bmenub">
+    <label for="bmenub" class="burger pseudo button">&#9776;</label>
 
-            <div class="menu">
-                <a href="index.html" class="pseudo button">Home</a>
-                <a href="meet-the-team.html" class="pseudo button">Meet Team Flock</a>
-                <a href="description.html" class="pseudo button">Description</a>
-                <a href="requirements.html" class="pseudo button">Requirements</a>
-                <a href="high-level-design.html" class="pseudo button">High-Level Design</a>
-                <a href="tools.html" class="pseudo button">Tech Stack</a>
-                <a href="schedule.html" class="pseudo button">Schedule</a>
+    <div class="menu">
+        <a href="index.html" class="pseudo button">Home</a>
+        <a href="meet-the-team.html" class="pseudo button">Meet Team Flock</a>
+        <a href="description.html" class="pseudo button">Description</a>
+        <a href="requirements.html" class="pseudo button">Requirements</a>
+        <a href="architecture.html" class="pseudo button">Architecture</a>
+        <a href="tools.html" class="pseudo button">Tech Stack</a>
+        <a href="schedule.html" class="pseudo button">Schedule</a>
+    </div>
+</nav>
+
+<div class="row" id="heading-bar">
+    <div class=""></div>
+    <div class="center-grid">
+        <h1 class="centered-text">Requirements</h1>
+    </div>
+    <div class=""></div>
+</div>
+
+<div class="row">
+    <div></div>
+    <div class="center-grid">
+        <div class="requirement-header">
+            <h3>
+                1. On-boarding
+            </h3>
+            <div class="requirement-description">
+                Once the user has downloaded the application,
+                they'll now be given the option to either login (if they
+                have an existing account) or to create a new account. The
+                on-boarding process should be quick and efficient. It
+                should be brief while also providing us just enough
+                information to get the user started
             </div>
-        </nav>
-
-        <div class="row" id="heading-bar">
-            <div class=""></div>
-            <div class="center-grid">
-                <h1 class="centered-text">Requirements</h1>
+            <div class="requirement-description">
+                <h4>
+                    1.1 Login
+                </h4>
+                <div class="requirement-description">
+                    This will most likely be a button that's less visible
+                    than the 'Create Account' button. It's only use will
+                    be when a user logs out, switches phones or reloads
+                    the application after a deletion.
+                </div>
             </div>
-            <div class=""></div>
+            <div class="requirement-description">
+                <h4>
+                    1.2 Create account
+                </h4>
+                <div class="requirement-description">
+                    This will be the primary button that users
+                    would tap to start the on-boarding process
+                </div>
+                <div class="requirement-description">
+                    <h5>
+                        1.2.1 Register with social signup
+                    </h5>
+                    <div class="requirement-description">
+                        The user can create an account using their
+                        Facebook or Twitter social profile. This
+                        will silently provide us their name, phone
+                        number, and profile photo.
+                    </div>
+                </div>
+                <div class="requirement-description">
+                    <h5>
+                        1.2.2 Email
+                    </h5>
+                    <div class="requirement-description">
+                        The user can also create an account using
+                        their E-mail address.
+                    </div>
+                    <div class="requirement-description">
+                        <h5>
+                            1.2.2.1 User info collect
+                        </h5>
+                        <div class="requirement-description">
+                            User will be asked to provide
+                            their:First Name, phone number, and be
+                            asked to take or upload a profile
+                            photo.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="requirement-header">
+            <h3>
+                2. Create a group
+            </h3>
+            <div class="requirement-description">
+                <h4>
+                    2.1 Create a group via a gesture
+                </h4>
+                <div class="requirement-description">
+                    This choice will launch a graphic that encourages
+                    the users to create the group via a gesture (with
+                    phone in hand), i.e. tap knuckles. By getting a
+                    user to perform the gesture with the application
+                    open, our technology will recognize the other
+                    devices also doing the gesture and create a group.
+                </div>
+            </div>
+            <div class="requirement-description">
+                <h4>
+                    2.2 Create group via contacts
+                </h4>
+                <div class="requirement-description">
+                    There will be an alternative action that users can
+                    perform to create a group. This could be preferred
+                    for these instance: users aren't in the same
+                    vicinity, or they simply don't want to do a gesture
+                    in public. In this case we'll need to let them
+                    choose fromt heir Facebook friends or their phone
+                    contacts.
+                </div>
+                <div class="requirement-description">
+                    <h5>
+                        2.2.1 User notified when added via contact
+                    </h5>
+                    <div class="requirement-description">
+                        The user who's addd via the contact dialog is
+                        sent a push notification letting them know
+                        they've been invited. If they don't have the
+                        application then they're sent an SMS with a
+                        link to the application in the app store. They
+                        must load the application and accept the
+                        invite.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="requirement-header">
+            <h3>
+                3. Viewing group on map
+            </h3>
+            <div class="requirement-description">
+                <h4>
+                    3.1 Tap on a user's location marker
+                </h4>
+                <div class="requirement-description">
+                    This brings up a user's detail profile (photo,
+                    name, distance from user viewing the profile, and
+                    option to direct message).
+                </div>
+            </div>
+            <div class="requirement-description">
+                <h4>
+                    3.2 Add user
+                </h4>
+                <div class="requirement-description">
+                    Once a group has been created any of the existing
+                    members can add a new user to the group. Once added
+                    all the others in the group are notified.
+                </div>
+                <div class="requirement-description">
+                    <h5>
+                        3.2.1 Add user via gesture
+                    </h5>
+                    <div class="requirement-description">
+                        This will open a dialog that illustrates that
+                        the new user (within proximity) should open
+                        their app and do the gesture to join group.
+                    </div>
+                </div>
+                <div class="requirement-description">
+                    <h5>
+                        3.2.2 Add user via contacts
+                    </h5>
+                    <div class="requirement-description">
+                        This will open a dialog that lets them invite
+                        user from their Facebook friends or their phone
+                        contacts and invite a new user to the group.
+                    </div>
+                    <div class="requirement-description">
+                        <h6>
+                            3.2.2.1 User notified when added via contact
+                        </h6>
+                        <div class="requirement-description">
+                            The user who's added via the contact dialog
+                            is sent a push notification letting them
+                            know they've been invited. If they don't
+                            have the application then they're sent an
+                            SMS with a link to the application in the
+                            app store. They must load the application
+                            and accept the invite.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="requirement-header">
+            <h3>
+                4. Messaging within the group
+            </h3>
+            <div class="requirement-description">
+                <h4>
+                    4.1 Message the group
+                </h4>
+                <div class="requirement-description">
+                    Each group has a main message window where users
+                    can post messages to each other that the entire
+                    group can see.
+                </div>
+                <div class="requirement-description">
+                    <h5>
+                        4.1.1 Tap on a user
+                    </h5>
+                    <div class="requirement-description">
+                        This will take the view back to the map and
+                        highlight the user on the map.
+                    </div>
+                </div>
+            </div>
+            <div class="requirement-description">
+                <h4>
+                    4.2 Group list
+                </h4>
+                <div class="requirement-description">
+                    Users can expand the group list and tap on a user
+                    to highlight that user on the map or tap on a
+                    message button to open direct message to that user.
+                </div>
+            </div>
+        </div>
+        <div class="requirement-header">
+            <h3>
+                5. Leaving or dissolving the group
+            </h3>
+            <div class="requirement-description">
+                <h4>
+                    5.1 Leave group
+                </h4>
+                <div class="requirement-description">
+                    A user can chooose to be removed from the group.
+                </div>
+            </div>
+            <div class="requirement-description">
+                <h4>
+                    5.2 Dissolve group
+                </h4>
+                <div class="requirement-description">
+                    A user can choose to dissolve the group. When a
+                    user selects this then the rest of the group is
+                    sent a notification to approve. Once 50% of the
+                    group approves then the group is dissolbed. If
+                    there are only two people in a group it is
+                    automatically dissolved.
+                </div>
+            </div>
         </div>
 
-        <div class="row">
-            <div></div>
-            <div class="center-grid">
-                <h2 class="centered-text">
+        <h2 class="centered-text">
 
-                </h2>
-                <hr>
-                <div class="requirement-header">
-                    <h3>
-                        1. On-boarding
-                    </h3>
-                    <div class="requirement-description">
-                        User has downloaded the application.
-                        They'll now be given the option to either login (if they 
-                        have an existing account) or to create a new account. The
-                        on-boarding process should be quick and efficient. It
-                        should be brief while also providing us just enough
-                        information to get the user started
-                    </div>
-                    <div class="requirement-description">
-                        <h4>
-                            1.1 Login
-                        </h4>
-                        <div class="requirement-description">
-                            This will most likely be a button that's less visible
-                            than the 'Create Account' button. It's only use will
-                            be when a user logs out, switches phones or reloads
-                            the application after a deletion. 
-                        </div>
-                    </div>
-                    <div class="requirement-description">
-                        <h4>
-                            1.2 Create account
-                        </h4>
-                        <div class="requirement-description">
-                            This will be the primary button that users
-                            would tap to start the on-boarding process
-                        </div>
-                        <div class="requirement-description">
-                            <h5>
-                                1.2.1 Register with social signup   
-                            </h5>
-                            <div class="requirement-description">
-                                The user can create an account using their
-                                Facebook or Twitter social profile. This
-                                will silently provide us their name, phone
-                                number, and profile photo.
-                            </div>
-                        </div>
-                        <div class="requirement-description">
-                            <h5>
-                                1.2.2 Email
-                            </h5>
-                            <div class="requirement-description">
-                                The user can also create an account using
-                                their E-mail address.
-                            </div>
-                            <div class="requirement-description">
-                                <h5>
-                                    1.2.2.1 User info collect
-                                </h5>
-                                <div class="requirement-description">
-                                    User will be asked to provide
-                                    their:First Name, phone number, and be
-                                    asked to take or upload a profile
-                                    photo.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="requirement-header">
-                    <h3>
-                        2. Create a group
-                    </h3>
-                    <div class="requirement-description">
-                        <h4>
-                            2.1 Create a group via a gesture
-                        </h4>
-                        <div class="requirement-description">
-                            This choice will launch a graphic that encourages
-                            the users to create the group via a gesture (with
-                            phone in hand), i.e. tap knuckles. By getting a
-                            user to perform the gesture with the application
-                            open, our technology will recognize the other
-                            devices also doing the gesture and create a group.
-                        </div>
-                    </div>
-                    <div class="requirement-description">
-                        <h4>
-                            2.2 Create group via contacts
-                        </h4>
-                        <div class="requirement-description">
-                            There will be an alternative action that users can
-                            perform to create a group. This could be preferred
-                            for these instance: users aren't in the same
-                            vicinity, or they simply don't want to do a gesture
-                            in public. In this case we'll need to let them
-                            choose fromt heir Facebook friends or their phone
-                            contacts.
-                        </div>
-                        <div class="requirement-description">
-                            <h5>
-                                2.2.1 User notified when added via contact
-                            </h5>
-                            <div class="requirement-description">
-                                The user who's addd via the contact dialog is
-                                sent a push notification letting them know
-                                they've been invited. If they don't have the
-                                application then they're sent an SMS with a
-                                link to the application in the app store. They
-                                must load the application and accept the
-                                invite.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="requirement-header">
-                    <h3>
-                        3. Viewing group on map
-                    </h3>
-                    <div class="requirement-description">
-                        <h4>
-                            3.1 Tap on a user's location marker
-                        </h4>
-                        <div class="requirement-description">
-                            This brings up a user's detail profile (photo,
-                            name, distance from user viewing the profile, and
-                            option to direct message).
-                        </div>
-                    </div>
-                    <div class="requirement-description">
-                        <h4>
-                            3.2 Add user
-                        </h4>
-                        <div class="requirement-description">
-                            Once a group has been created any of the existing
-                            members can add a new user to the group. Once added
-                            all the others in the group are notified.
-                        </div>
-                        <div class="requirement-description">
-                            <h5>
-                                3.2.1 Add user via gesture
-                            </h5>
-                            <div class="requirement-description">
-                               This will open a dialog that illustrates that
-                               the new user (within proximity) should open
-                               their app and do the gesture to join group. 
-                            </div>
-                        </div>
-                        <div class="requirement-description">
-                            <h5>
-                                3.2.2 Add user via contacts
-                            </h5>
-                            <div class="requirement-description">
-                                This will open a dialog that lets them invite
-                                user from their Facebook friends or their phone
-                                contacts and invite a new user to the group.
-                            </div>
-                            <div class="requirement-description">
-                                <h6>
-                                    3.2.2.1 User notified when added via contact
-                                </h6>
-                                <div class="requirement-description">
-                                    The user who's added via the contact dialog
-                                    is sent a push notification letting them
-                                    know they've been invited. If they don't
-                                    have the application then they're sent an
-                                    SMS with a link to the application in the
-                                    app store. They must load the application
-                                    and accept the invite.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="requirement-header">
-                    <h3>
-                        4. Messaging within the group
-                    </h3>
-                    <div class="requirement-description">
-                        <h4>
-                            4.1 Message the group
-                        </h4>
-                        <div class="requirement-description">
-                            Each group has a main message window where users
-                            can post messages to each other that the entire
-                            group can see.
-                        </div>
-                        <div class="requirement-description">
-                            <h5>
-                                4.1.1 Tap on a user
-                            </h5>
-                            <div class="requirement-description">
-                                This will take the view back to the map and
-                                highlight the user on the map.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="requirement-description">
-                        <h4>
-                            4.2 Group list
-                        </h4>
-                        <div class="requirement-description">
-                            Users can expand the group list and tap on a user
-                            to highlight that user on the map or tap on a
-                            message button to open direct message to that user.
-                        </div>
-                    </div>
-                </div>
-                <div class="requirement-header">
-                    <h3>
-                        5. Leaving or dissolving the group
-                    </h3>
-                    <div class="requirement-description">
-                        <h4>
-                            5.1 Leave group
-                        </h4>
-                        <div class="requirement-description">
-                            A user can chooose to be removed from the group.
-                        </div>
-                    </div>
-                    <div class="requirement-description">
-                        <h4>
-                            5.2 Dissolve group
-                        </h4>
-                        <div class="requirement-description">
-                            A user can choose to dissolve the group. When a
-                            user selects this then the rest of the group is
-                            sent a notification to approve. Once 50% of the
-                            group approves then the group is dissolbed. If
-                            there are only two people in a group it is
-                            automatically dissolved.
-                        </div>
-                    </div>
-                </div>
+        </h2>
+        <hr>
+        <p>
 
-                <h2 class="centered-text">
-
-                </h2>
-                <hr>
-                <p>
-
-                </p>
-            </div>
-            <div></div>
-        </div>
-    </body>
+        </p>
+    </div>
+    <div></div>
+</div>
+</body>
 </html>

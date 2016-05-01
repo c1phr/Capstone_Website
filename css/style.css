@@ -47,3 +47,12 @@ img {
     margin: 0 auto;
     display: block;
 }
+
+img.phone-screens {
+    width: 32%;
+    display: inline;
+}
+
+table.notable {
+    width: 100%;
+}
